@@ -1,0 +1,96 @@
+/* Basic full-height layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Full-screen background image */
+.bg-overlay {
+  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(3px);
+}
+
+/* Outer box for weather app UI */
+.weather-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  margin: 15px;
+}
+
+/* Main weather card with updated color */
+.weather-card {
+  background-color: rgba(220, 240, 255, 0.85); /* soft pastel blue */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Weather condition icon */
+.weather-icon {
+  width: 100px;
+  height: auto;
+}
+.weather-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-condition {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #495057;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-top: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Info box for temperature, humidity, wind */
+.info-box {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Text under each icon */
+.label {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+/* Value text (e.g., 28°C) */
+.value {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.weather-icon {
+  width: 100px;
+  height: auto;
+  animation: floatCloud 3s ease-in-out infinite;
+}
+
+@keyframes floatCloud {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
